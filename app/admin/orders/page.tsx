@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const API_BASE = "http://localhost/Shirt%20store/Backend1/api/Admin-apis/Admin-orders.php";
+const API_BASE = "http://localhost:8000/api/Admin-apis/Admin-orders.php";
 
 type Order = {
   id: number;

@@ -43,7 +43,7 @@ export default function AllBouquetsPage() {
   };
 
   useEffect(() => {
-    fetch("http://localhost/Shirt%20store/Backend1/api/Bouquets.php")
+    fetch("http://localhost:8000/api/Bouquets.php")
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {

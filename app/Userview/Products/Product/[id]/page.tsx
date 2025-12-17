@@ -52,7 +52,7 @@ export default function ProductPage() {
   useEffect(() => {
     if (!id) return;
     const typeQuery = typeParam ? `&type=${encodeURIComponent(typeParam)}` : "";
-    fetch(`http://localhost/Shirt%20store/Backend1/api/Product.php?id=${id}${typeQuery}`)
+    fetch(`http://localhost:8000/api/Product.php?id=${id}${typeQuery}`)
       .then(res => res.json())
       .then(data => {
         if (data.status === "success") {
@@ -61,7 +61,7 @@ export default function ProductPage() {
             ...prod,
             price: Number(prod.price ?? 0),
             description: prod.description ?? "No description available",
-            images: (prod.images?.length ? prod.images : [prod.img]).filter(img => img && img.trim()),
+            images: (prod.images?.length ? prod.images : [prod.img]).filter((img: string) => img && img.trim()),
             colors: prod.colors ?? [],
           });
           if (prod.colors?.length) setSelectedColor(prod.colors[0]);
@@ -104,7 +104,7 @@ export default function ProductPage() {
     };
 
     try {
-      const response = await fetch("http://localhost/Shirt%20store/Backend1/api/Order.php", {
+      const response = await fetch("http://localhost:8000/api/Order.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

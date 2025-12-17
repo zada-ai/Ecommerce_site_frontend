@@ -13,7 +13,7 @@ export default function AdminLogin() {
     }
 
     try {
-      const res = await fetch("http://localhost/Shirt%20store/Backend1/api/Admin-apis/Admin-login.php", {
+      const res = await fetch("http://localhost:8000/api/Admin-apis/Admin-login.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -73,3 +73,4 @@ export default function AdminLogin() {
     </div>
   );
 }
+

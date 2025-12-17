@@ -18,7 +18,7 @@ export default function RegisterPage() {
 
     try {
       const res = await fetch(
-        "http://localhost/Shirt%20store/Backend1/api/Signup.php",
+        "http://localhost:8000/api/Signup.php",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -125,3 +125,4 @@ export default function RegisterPage() {
          </>
   );
 }
+

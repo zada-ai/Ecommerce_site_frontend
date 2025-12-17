@@ -43,7 +43,7 @@ export default function AllCandlesPage() {
   };
 
   useEffect(() => {
-    fetch("http://localhost/Shirt%20store/Backend1/api/Candles.php")
+    fetch("http://localhost:8000/api/Candles.php")
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {

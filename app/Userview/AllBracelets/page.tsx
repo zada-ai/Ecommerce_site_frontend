@@ -43,7 +43,7 @@ export default function AllBraceletsPage() {
   };
 
   useEffect(() => {
-    fetch("http://localhost/Shirt%20store/Backend1/api/Bracelet.php")
+    fetch("http://localhost:8000/api/Bracelet.php")
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
