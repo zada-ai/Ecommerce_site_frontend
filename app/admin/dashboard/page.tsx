@@ -124,7 +124,7 @@ export default function AdminDashboard() {
               placeholder="Price"
               type="number"
               value={price}
-              onChange={(e) => setPrice(e.target.value === "" ? "" : Number(e.target.value))}
+              onChange={(e) => setPrice(e.target.value)}
             />
           </div>
 

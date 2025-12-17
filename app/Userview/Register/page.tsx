@@ -46,11 +46,12 @@ export default function RegisterPage() {
         showResponse(data.message || "Signup failed", true);
       }
     } catch (err) {
-      showResponse("Network error: " + err.message, true);
+      const message = err instanceof Error ? err.message : "Unknown error";
+      showResponse("Network error: " + message, true);
     }
   };
 
-  const showResponse = (text, isError) => {
+  const showResponse = (text: string, isError: boolean) => {
     setError(isError);
     setResponseMsg(text);
   };

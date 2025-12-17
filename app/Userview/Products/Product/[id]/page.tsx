@@ -70,11 +70,11 @@ export default function ProductPage() {
         }
         setLoading(false);
       })
-      .catch(err => {
+      .catch((e) => {
         setError("Failed to fetch product");
         setLoading(false);
       });
-  }, [id]);
+  }, [id, typeParam]);
 
   if (loading) return <div className="p-8 text-center">Loading...</div>;
   if (error) return <div className="p-8 text-red-600 text-center">{error}</div>;
@@ -120,7 +120,7 @@ export default function ProductPage() {
       } else {
         alert("Failed to place order: " + data.message);
       }
-    } catch (error) {
+    } catch (e) {
       alert("Failed to place order. Please try again.");
     }
   };

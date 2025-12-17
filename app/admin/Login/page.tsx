@@ -61,7 +61,7 @@ export default function AdminLogin() {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <p className="text-center text-red-600 min-h-[20px]">{response}</p>
+        <p className="text-center text-red-600 min-h-5">{response}</p>
 
         <button
           className="w-full bg-green-600 text-white py-2 rounded mt-2"

@@ -1,12 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { Heart } from "lucide-react";
 import Link from "next/link";
 import Navbar from "../../Home/Navbar/page";
 import Footer from "../Footer/page";
+
+export const dynamic = 'force-dynamic';
 
 // Custom HeartFilled SVG
 const HeartFilled = () => (
@@ -28,7 +30,7 @@ type Bracelet = {
   price?: number | string;
 };
 
-export default function AllBraceletsPage() {
+function AllBraceletsPage() {
   const searchParams = useSearchParams();
   const searchQuery = searchParams.get('search') || '';
 
@@ -141,5 +143,13 @@ export default function AllBraceletsPage() {
       </div>
       <Footer />
     </>
+  );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AllBraceletsPage />
+    </Suspense>
   );
 }

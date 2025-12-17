@@ -50,7 +50,8 @@ export default function LoginPage() {
         setResponse(data.message || "Login failed");
       }
     } catch (err) {
-      setResponse("Network error: " + err.message);
+      const message = err instanceof Error ? err.message : "Unknown error";
+      setResponse("Network error: " + message);
     }
   }
 
@@ -85,7 +86,7 @@ export default function LoginPage() {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <p className="text-center text-red-600 min-h-[20px]">{response}</p>
+          <p className="text-center text-red-600 min-h-5">{response}</p>
 
           <button
             onClick={login}
@@ -95,7 +96,7 @@ export default function LoginPage() {
           </button>
 
           <p className="mt-4 text-center text-sm">
-            Don't have an account?
+            Don&apos;t have an account?
             <a href="/Userview/Register" className="text-green-600 font-bold ml-1">
               Register
             </a>

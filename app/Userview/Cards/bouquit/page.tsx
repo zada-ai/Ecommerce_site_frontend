@@ -69,7 +69,7 @@ export default function BouquitSection() {
         {currentIndex > 0 && (
           <button
             onClick={prev}
-            className="absolute left-0 z-10 bg-gray-200 text-black rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-300 hidden md:flex"
+            className="absolute left-0 z-10 bg-gray-200 text-black rounded-full w-10 h-10 hidden md:flex md:items-center md:justify-center hover:bg-gray-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@ export default function BouquitSection() {
         {currentIndex + 4 < bouquets.length && (
           <button
             onClick={next}
-            className="absolute right-0 z-10 bg-gray-200 text-black rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-300 hidden md:flex"
+            className="absolute right-0 z-10 bg-gray-200 text-black rounded-full w-10 h-10 hidden md:flex md:items-center md:justify-center hover:bg-gray-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
