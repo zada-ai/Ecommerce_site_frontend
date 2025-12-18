@@ -18,7 +18,7 @@ export default function RegisterPage() {
 
     try {
       const res = await fetch(
-        "https://rizamunawar.kesug.com/Backend1/api/Signup.php",
+        "http://localhost:8000/api/Signup.php",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

@@ -43,7 +43,7 @@ export default function Bracelet() {
   const visibleCandles = bracelets.slice(currentIndex, currentIndex + 4);
 
   useEffect(() => {
-    fetch("https://rizamunawar.kesug.com/Backend1/api/Bracelet.php")
+    fetch("http://localhost:8000/api/Bracelet.php")
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
@@ -69,7 +69,7 @@ export default function Bracelet() {
         {currentIndex > 0 && (
           <button
             onClick={prev}
-            className="absolute left-0 z-10 bg-gray-200 text-black rounded-full w-10 h-10 hidden md:flex md:items-center md:justify-center hover:bg-gray-300"
+            className="absolute left-0 z-10 bg-gray-200 text-black rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-300 hidden md:flex"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@ export default function Bracelet() {
         {currentIndex + 4 < bracelets.length && (
           <button
             onClick={next}
-            className="absolute right-0 z-10 bg-gray-200 text-black rounded-full w-10 h-10 hidden md:flex md:items-center md:justify-center hover:bg-gray-300"
+            className="absolute right-0 z-10 bg-gray-200 text-black rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-300 hidden md:flex"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -162,4 +162,3 @@ export default function Bracelet() {
     </section>
   );
 }
-

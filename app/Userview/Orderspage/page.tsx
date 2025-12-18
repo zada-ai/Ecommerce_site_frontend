@@ -42,7 +42,7 @@ export default function OrdersPage() {
   const fetchOrders = async () => {
     try {
       const response = await fetch(
-        `https://rizamunawar.kesug.com/Backend1/api/Orders.php?user_email=${user_email}`
+        `http://localhost:8000/api/Orders.php?user_email=${user_email}`
       );
       const data = await response.json();
       if (data.status === "success") {

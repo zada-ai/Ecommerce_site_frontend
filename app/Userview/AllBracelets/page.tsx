@@ -45,7 +45,7 @@ function AllBraceletsPage() {
   };
 
   useEffect(() => {
-    fetch("https://rizamunawar.kesug.com/Backend1/api/Bracelet.php")
+    fetch("http://localhost:8000/Backend1/api/Bracelet.php")
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
@@ -143,5 +143,13 @@ function AllBraceletsPage() {
       </div>
       <Footer />
     </>
+  );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AllBraceletsPage />
+    </Suspense>
   );
 }
