@@ -52,7 +52,7 @@ export default function ProductPage() {
   useEffect(() => {
     if (!id) return;
     const typeQuery = typeParam ? `&type=${encodeURIComponent(typeParam)}` : "";
-    fetch(`http://localhost:8000/api/Product.php?id=${id}${typeQuery}`)
+    fetch(`https://rizamunawar.kesug.com/Backend1/api/Product.php?id=${id}${typeQuery}`)
       .then(res => res.json())
       .then(data => {
         if (data.status === "success") {
@@ -104,7 +104,7 @@ export default function ProductPage() {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/api/Order.php", {
+      const response = await fetch("https://rizamunawar.kesug.com/Backend1/api/Order.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

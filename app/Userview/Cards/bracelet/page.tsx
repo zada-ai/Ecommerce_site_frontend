@@ -43,7 +43,7 @@ export default function Bracelet() {
   const visibleCandles = bracelets.slice(currentIndex, currentIndex + 4);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/Bracelet.php")
+    fetch("https://rizamunawar.kesug.com/Backend1/api/Bracelet.php")
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {

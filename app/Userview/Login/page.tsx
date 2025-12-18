@@ -16,7 +16,7 @@ export default function LoginPage() {
 
     try {
       const res = await fetch(
-        "http://localhost:8000/api/Login.php",
+        "https://rizamunawar.kesug.com/Backend1/api/Login.php",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

@@ -49,7 +49,7 @@ export default function MainNavbar() {
       setSearchLoading(true);
       try {
         const response = await fetch(
-          `http://localhost:8000/api/SearchProduct.php?query=${encodeURIComponent(searchQuery)}`
+          `https://rizamunawar.kesug.com/Backend1/api/SearchProduct.php?query=${encodeURIComponent(searchQuery)}`
         );
         const data = await response.json();
         if (data.status === "success") {

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const API_BASE = "http://localhost:8000/api/Admin-apis/Admin-candles.php";
+const API_BASE = "https://rizamunawar.kesug.com/Backend1/api/Admin-apis/Admin-candles.php";
 
 type Candle = {
   id: number;
