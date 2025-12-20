@@ -43,7 +43,7 @@ export default function BouquitSection() {
   const visibleCandles = bouquets.slice(currentIndex, currentIndex + 4);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/Bouquets.php")
+    fetch("https://rizaglowgardens.xo.je/Backend1/api/Bouquets.php")
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
